@@ -1,6 +1,6 @@
 # LinnX Universe 🌌
 
-> **I don't climb ladders. I build systems.**
+> **营销是训练场，AI 是协作伙伴，OPC 是正在长出的形态。**
 
 An AI-native personal universe built by **Linn** — Marketing & Brand Director @ YRHR, AI-Native Marketing Architect, and OPC Explorer.
 
