@@ -2,7 +2,7 @@
 
 > **I don't climb ladders. I build systems.**
 
-An AI-native personal universe built by **Linn Deng (邓羚)** — Marketing & Brand Director @ YRHR, AI-Native Marketing Architect, and OPC Explorer.
+An AI-native personal universe built by **Linn** — Marketing & Brand Director @ YRHR, AI-Native Marketing Architect, and OPC Explorer.
 
 ## 🌐 Live Site
 
