@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="LinnX 的宇宙 — 邓羚 (Linn Deng) 的个人能力展示。AI 时代的营销架构师，云锐科技市场品牌总监。An AI-native personal universe.">
+<meta name="author" content="Linn Deng (邓羚)">
+<meta name="keywords" content="LinnX, 邓羚, AI native, marketing architect, CMO, YRHR, 云锐科技, human-AI collaboration, OPC, personal IP">
+<meta name="ai-native" content="true">
+<meta name="ai:manifest" content="#llms-manifest">
+<meta name="ai:last-iterated" content="2026-06-19">
+<meta property="og:title" content="LinnX 的宇宙 · LinnX Universe">
+<meta property="og:description" content="I don't climb ladders. I build systems. — LinnX Universe">
+<meta property="og:type" content="website">
+<title>LinnX 的宇宙 · Universe</title>
+
+<!-- JSON-LD: Agent-readable identity graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "邓羚",
+  "alternateName": ["Linn", "LinnX", "Linn Deng", "大羚"],
+  "jobTitle": "Marketing & Brand Director / AI-Native Marketing Architect",
+  "worksFor": { "@type": "Organization", "name": "YRHR 云锐科技" },
+  "address": { "@type": "Place", "name": "Shanghai, China" },
+  "email": "Linn@yrhr.com",
+  "knowsLanguage": ["zh-CN", "en", "fr"],
+  "knowsAbout": ["Brand Strategy", "AI-Native Marketing", "Content Engineering", "Channel Operations", "Pitch & Roadshow", "Human-AI Collaboration", "OPC / Personal IP"],
+  "sameAs": ["https://www.yrhr.com"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600&family=Noto+Sans+SC:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #030814;
+  --bg-soft: #08122a;
+  --gold: #4DB4FF;
+  --gold-dim: rgba(77, 180, 255, 0.16);
+  --gold-glow: rgba(77, 180, 255, 0.55);
+  --white: #FFFFFF;
+  --gray-1: #c0cddc;
+  --gray-2: #6a7a90;
+  --gray-3: #1a2438;
+  --line: rgba(77, 180, 255, 0.12);
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cn: 'Noto Sans SC', 'PingFang SC', sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-display);
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === STARFIELD === */
+.stars {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  background: var(--white);
+  border-radius: 50%;
+  animation: twinkle 5s ease-in-out infinite;
+}
+.star.warm { background: #4DB4FF; }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.85; }
+}
+
+/* Subtle cosmic gradient overlay */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(94, 170, 255, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(94, 170, 255, 0.04) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* === NAVIGATION === */
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 1px;
+  background: #4DB4FF;
+  width: 0%;
+  z-index: 200;
+  transition: width 0.15s linear;
+  opacity: 0.7;
+}
+.nav-dots {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 100;
+}
+.nav-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gray-2);
+  cursor: pointer;
+  transition: all 0.4s var(--ease);
+}
+.nav-dot:hover { background: var(--white); }
+.nav-dot.active {
+  background: #4DB4FF;
+  box-shadow: 0 0 8px var(--gold-glow);
+  transform: scale(1.5);
+}
+
+/* AI-native badge */
+.ai-badge {
+  position: fixed;
+  bottom: clamp(1rem, 3vw, 2rem);
+  left: clamp(1rem, 3vw, 2rem);
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: var(--gray-2);
+  text-transform: uppercase;
+  z-index: 100;
+  transition: color 0.5s;
+  cursor: default;
+}
+.ai-badge:hover { color: #4DB4FF; }
+.ai-badge::before {
+  content: '●';
+  color: #4DB4FF;
+  margin-right: 8px;
+  font-size: 0.5rem;
+  opacity: 0.6;
+  animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* === SECTION === */
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 6rem);
+  z-index: 2;
+}
+.inner {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.inner::-webkit-scrollbar { display: none; }
+
+/* === TYPOGRAPHY === */
+.eyebrow {
+  font-size: clamp(0.6rem, 0.8vw, 0.72rem);
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: #4DB4FF;
+  text-transform: uppercase;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+.eyebrow .num {
+  color: var(--gray-2);
+  margin-right: 1em;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+h1 {
+  font-size: clamp(3.5rem, 14vw, 12rem);
+  letter-spacing: -0.04em;
+}
+h2 {
+  font-size: clamp(2rem, 5.5vw, 4.2rem);
+  font-weight: 200;
+  line-height: 1.1;
+}
+h3 {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.cn {
+  font-family: var(--font-cn);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.sub {
+  font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.7;
+  margin-top: clamp(1rem, 2vw, 1.8rem);
+  max-width: 640px;
+  font-family: var(--font-cn);
+  font-weight: 300;
+}
+
+.en-sub {
+  font-size: clamp(0.7rem, 0.95vw, 0.82rem);
+  font-weight: 300;
+  color: var(--gray-2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.6em;
+  font-family: var(--font-display);
+}
+
+/* Divider line */
+.rule {
+  width: 40px;
+  height: 1px;
+  background: #4DB4FF;
+  margin: clamp(1.5rem, 3vw, 2.5rem) 0;
+  opacity: 0.6;
+}
+.rule.long { width: 80px; }
+
+/* === HERO === */
+#hero h1 {
+  background: linear-gradient(180deg, #ffffff 0%, #e8f1fb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.18)) drop-shadow(0 0 56px rgba(77, 180, 255, 0.2));
+  position: relative;
+  animation: heroBreathe 5s ease-in-out infinite;
+}
+@keyframes heroBreathe {
+  0%, 100% { filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.18)) drop-shadow(0 0 56px rgba(77, 180, 255, 0.15)); }
+  50%      { filter: drop-shadow(0 0 32px rgba(255, 255, 255, 0.28)) drop-shadow(0 0 72px rgba(77, 180, 255, 0.32)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hero h1 { animation: none; }
+}
+.hero-tag {
+  font-size: clamp(0.75rem, 1.1vw, 0.9rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: var(--white);
+  text-transform: uppercase;
+  opacity: 1;
+}
+.hero-tag-cn {
+  display: block;
+  font-family: var(--font-cn);
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  letter-spacing: 0.3em;
+  color: var(--gray-1);
+  margin-top: 1.2em;
+  font-weight: 300;
+}
+/* === SIGNAL (Identity) === */
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.signal-cell {
+  background: var(--bg);
+  padding: clamp(1.2rem, 2.2vw, 2rem) clamp(0.8rem, 1.5vw, 1.2rem);
+}
+.signal-cell .k {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  color: #4DB4FF;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+.signal-cell .v {
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.signal-cell .v-cn {
+  display: block;
+  font-family: var(--font-cn);
+  font-size: 0.78rem;
+  color: var(--gray-1);
+  margin-top: 0.4em;
+  letter-spacing: 0.08em;
+}
+
+/* === MANIFESTO === */
+.manifesto {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.2vw, 2.6rem);
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  max-width: 900px;
+}
+.manifesto em {
+  font-style: normal;
+  color: #4DB4FF;
+  font-weight: 300;
+}
+.manifesto .dim {
+  color: var(--gray-1);
+}
+.manifesto-cn {
+  font-family: var(--font-cn);
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.9;
+  max-width: 680px;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.05em;
+}
+
+/* === COLOR STORY — 设计师签名 === */
+.color-story {
+  margin-top: clamp(2.5rem, 4.5vw, 3.5rem);
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(1.2rem, 2.5vw, 2rem);
+  padding: 1.1rem 1.6rem;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  max-width: 640px;
+  transition: border-color 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.color-story:hover {
+  border-color: rgba(77, 180, 255, 0.4);
+  transform: translateY(-2px);
+}
+.color-swatch {
+  width: 54px; height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4DB4FF 0%, #2E8FE0 100%);
+  box-shadow: 0 0 20px rgba(77, 180, 255, 0.35), inset 0 0 8px rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+.color-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-bottom: 0.5em;
+}
+.color-name {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: #4DB4FF;
+  text-transform: uppercase;
+}
+.color-hex {
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  color: var(--gray-2);
+  letter-spacing: 0.08em;
+}
+.color-story-body {
+  font-family: var(--font-cn);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.85;
+  letter-spacing: 0.04em;
+}
+.color-story-body em {
+  font-style: normal;
+  color: #4DB4FF;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .color-story { flex-direction: column; align-items: flex-start; text-align: left; padding: 0.9rem 1rem; }
+  .color-swatch { width: 40px; height: 40px; }
+  .manifesto-cn { font-size: 0.78rem; line-height: 1.8; }
+  .color-story-body { font-size: 0.72rem; }
+}
+
+
+/* === SKILLS === */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid var(--line);
+  width: 100%;
+  overflow: visible;
+}
+.skill {
+  background: var(--bg);
+  padding: clamp(1.5rem, 2.8vw, 2.2rem);
+  display: flex;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  align-items: flex-start;
+  transition: background 0.5s var(--ease);
+  cursor: default;
+  position: relative;
+  overflow: visible;
+  min-width: 0;
+}
+.skill:hover { background: var(--bg-soft); }
+.skill::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 0; height: 100%;
+  background: #4DB4FF;
+  opacity: 0;
+  transition: all 0.5s var(--ease);
+}
+.skill:hover::before {
+  width: 2px;
+  opacity: 1;
+}
+.skill-idx {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: #4DB4FF;
+  letter-spacing: 0.2em;
+  padding-top: 0.3em;
+  min-width: 42px;
+}
+.skill-body h3 {
+  color: var(--white);
+  margin-bottom: 0.3em;
+}
+.skill-body .cn-title {
+  font-family: var(--font-cn);
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--gray-1);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8em;
+}
+.skill-body p {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.6;
+  font-family: var(--font-cn);
+  letter-spacing: 0.04em;
+}
+.skill-meta {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: var(--gray-2);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+/* === PROTOCOL === */
+.protocol-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+.proto-col {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+.proto-col.agent { border-top-color: #4DB4FF; }
+.proto-title {
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: #4DB4FF;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+.proto-col:not(.agent) .proto-title { color: var(--gray-1); }
+.proto-step {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+}
+.proto-step .num {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: #4DB4FF;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  min-width: 24px;
+}
+.proto-step .txt {
+  font-family: var(--font-cn);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--gray-1);
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+.proto-code {
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 0.8em 1em;
+  color: var(--gray-1);
+  margin-top: 1.5em;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+.proto-code .k { color: #4DB4FF; }
+.proto-code .c { color: var(--gray-2); }
+
+/* === ORBIT (Timeline) === */
+.orbit {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  padding: 3rem 0;
+}
+.orbit::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gray-3) 15%, var(--gray-3) 85%, transparent 100%);
+  transform: translateY(-50%);
+}
+.orbit-item {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding: 0 0.6rem;
+}
+.orbit-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4DB4FF;
+  margin: 0 auto 1.8em;
+  position: relative;
+  z-index: 2;
+}
+.orbit-item.active .orbit-dot {
+  width: 11px; height: 11px;
+  box-shadow: 0 0 18px rgba(77, 180, 255, 0.8), 0 0 5px rgba(77, 180, 255, 1);
+}
+.orbit-item.future .orbit-dot {
+  background: transparent;
+  border: 1px solid var(--gray-2);
+}
+.orbit-label {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4em;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.orbit-label .cn-part {
+  font-family: var(--font-cn);
+  letter-spacing: 0.12em;
+  margin-right: 0.6em;
+}
+.orbit-label .en-part {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: var(--gray-2);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: 0.15em;
+}
+.orbit-logic {
+  font-family: var(--font-cn);
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--gray-1);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+.orbit-sub {
+  display: none;
+}
+.orbit-item.active .orbit-label { color: #4DB4FF; text-shadow: 0 0 18px rgba(77, 180, 255, 0.6); }
+.orbit-item.active .orbit-label .en-part { color: rgba(77, 180, 255, 0.7); }
+.orbit-item.active .orbit-logic { color: #4DB4FF; opacity: 0.75; }
+.orbit-item.future .orbit-label { color: var(--gray-2); }
+.orbit-item.future .orbit-logic { color: var(--gray-2); }
+.orbit-item { transition: transform 0.5s var(--ease); }
+.orbit-item:hover { transform: translateY(-4px); }
+
+/* === CONTACT === */
+.contact-block {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 0.8em 0;
+  border-top: 1px solid var(--line);
+}
+.contact-row:last-child { border-bottom: 1px solid var(--line); }
+.contact-key {
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: #4DB4FF;
+  text-transform: uppercase;
+  min-width: 120px;
+}
+.contact-val {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+.contact-val a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contact-val a:hover { color: #4DB4FF; }
+
+/* === REVEAL ANIMATION === */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s var(--ease), transform 1s var(--ease);
+}
+section.visible .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal:nth-child(2) { transition-delay: 0.12s; }
+.reveal:nth-child(3) { transition-delay: 0.24s; }
+.reveal:nth-child(4) { transition-delay: 0.36s; }
+.reveal:nth-child(5) { transition-delay: 0.48s; }
+.reveal:nth-child(6) { transition-delay: 0.6s; }
+
+/* === RESPONSIVE === */
+@media (max-width: 820px) {
+  .signal-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills { grid-template-columns: 1fr; }
+  .protocol-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .skill-idx { min-width: 32px; }
+  .skill-body h3 { font-size: clamp(0.9rem, 2.5vw, 1.1rem); }
+  .skill-meta { letter-spacing: 0.12em; }
+  .orbit {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 0 1rem;
+  }
+  .orbit::before {
+    top: 0; bottom: 0;
+    left: 3px; right: auto;
+    width: 1px; height: 100%;
+    transform: none;
+  }
+  .orbit-item {
+    text-align: left;
+    padding: 0 0 0 1.8rem;
+  }
+  .orbit-dot {
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    margin: 0;
+  }
+  .nav-dots { display: none; }
+  .ai-badge { display: none; }
+  .contact-key { min-width: 80px; font-size: 0.6rem; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 2rem 1.5rem; }
+  .signal-grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: clamp(3rem, 20vw, 6rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.2s !important;
+  }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<nav class="nav-dots" id="navDots" aria-label="Section navigation"></nav>
+<div class="ai-badge" aria-label="AI-native site">AI-NATIVE SITE · v2026.06</div>
+
+<!-- ===================================================================
+     01 · HERO
+     =================================================================== -->
+<section id="hero">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">01</span>THE UNIVERSE OF LINNX</div>
+    <h1 class="reveal">LinnX</h1>
+    <div class="rule reveal"></div>
+    <div class="hero-tag reveal">
+      AI-NATIVE MARKETING ARCHITECT
+      <span class="hero-tag-cn cn">AI 时代的营销架构师</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     02 · SIGNAL — Who I Am
+     =================================================================== -->
+<section id="signal">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">02</span>SIGNAL</div>
+    <h2 class="reveal">I am <span style="color: #4DB4FF;">Linn</span>.</h2>
+    <p class="sub reveal cn">
+      一个正在构建自己宇宙的探索者。<br>
+      现任云锐科技市场品牌总监 — 下一阶段走向 CMO，<br>
+      同时也在生长为创新者、创业者、个人 IP 的构建者。
+    </p>
+
+    <div class="signal-grid reveal">
+      <div class="signal-cell">
+        <div class="k">ROLE</div>
+        <div class="v">Marketing Director
+          <span class="v-cn">市场品牌总监</span>
+        </div>
+      </div>
+      <div class="signal-cell">
+        <div class="k">LAB</div>
+        <div class="v">YRHR
+          <span class="v-cn">云锐科技</span>
+        </div>
+      </div>
+      <div class="signal-cell">
+        <div class="k">BASE</div>
+        <div class="v">Shanghai, CN</div>
+      </div>
+      <div class="signal-cell">
+        <div class="k">MINDSET</div>
+        <div class="v">Explorer
+          <span class="v-cn">探索者 · 创新者</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     03 · MANIFESTO
+     =================================================================== -->
+<section id="manifesto">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">03</span>MANIFESTO</div>
+    <p class="manifesto reveal">
+      I don't climb ladders.<br>
+      <em>I build systems.</em>
+    </p>
+    <p class="manifesto-cn reveal">
+      从执行营销，到设计营销运转的系统，再到让系统自己生长。<br>
+      营销是我选择的训练场，AI 是协作伙伴，OPC 是此刻正在长出的形态。
+    </p>
+
+    <div class="color-story reveal">
+      <div class="color-swatch" aria-hidden="true"></div>
+      <div>
+        <div class="color-meta">
+          <span class="color-name">CÔTE D'AZUR · 尼斯海岸蓝</span>
+          <span class="color-hex">#4DB4FF · RGB 77, 180, 255</span>
+        </div>
+        <p class="color-story-body">
+          <em>个人的</em> — 2016 年我在法国奥尔良交换，那是离地中海最近的一年。<br>
+          <em>品牌的</em> — 云锐未来蓝 #0F78F5 的进化，VI 基因长进了个人宇宙。<br>
+          <em>象征的</em> — Azure 在西方是真理与高贵，克制的高贵，不张扬。
+        </p>
+      </div>
+    </div>
+
+    <div class="rule long reveal"></div>
+    <p class="en-sub reveal">THE LAB IS THE WORK · THE WORK IS THE LAB</p>
+  </div>
+</section>
+
+<!-- ===================================================================
+     04 · SKILLS — Agent-readable capability catalog
+     =================================================================== -->
+<section id="skills">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">04</span>SKILL LIBRARY</div>
+    <h2 class="reveal">Callable Capabilities</h2>
+    <p class="sub reveal cn" style="margin-top: 0.8em; margin-bottom: 0;">
+      每一项技能，都是一个可被调用的能力单元。<br>
+      人类看见的是清单，Agent 看见的是目录。
+    </p>
+
+    <div class="skills reveal">
+      <div class="skill" data-skill="brand.architect">
+        <div class="skill-idx">01</div>
+        <div class="skill-body">
+          <h3>Brand Architect</h3>
+          <div class="cn-title">品牌体系架构</div>
+          <p>从 0 到 1 构建品牌体系。VI 手册 · 发布会 · 品牌升级全链路设计。</p>
+          <div class="skill-meta">VI · LAUNCH · STRATEGY · 12 SIGNALS</div>
+        </div>
+      </div>
+      <div class="skill" data-skill="marketing.engineer">
+        <div class="skill-idx">02</div>
+        <div class="skill-body">
+          <h3>Marketing Engineer</h3>
+          <div class="cn-title">营销系统工程</div>
+          <p>渠道台账 · 周报体系 · 月度经营链路 · 合伙人管理 — 系统化运营基建。</p>
+          <div class="skill-meta">OPS · PIPELINE · REPORTING · 8 SIGNALS</div>
+        </div>
+      </div>
+      <div class="skill" data-skill="content.creator">
+        <div class="skill-idx">03</div>
+        <div class="skill-body">
+          <h3>Content Creator</h3>
+          <div class="cn-title">内容引擎</div>
+          <p>公众号矩阵 · 短视频体系 · 真知锐见 · 羚羊挂角写作引擎 · 每日营销。</p>
+          <div class="skill-meta">WRITING · VIDEO · IP · 15 SIGNALS</div>
+        </div>
+      </div>
+      <div class="skill" data-skill="pitch.roadshow">
+        <div class="skill-idx">04</div>
+        <div class="skill-body">
+          <h3>Pitch &amp; Roadshow</h3>
+          <div class="cn-title">路演系统构建</div>
+          <p>PPT 设计 · 逐字稿 · Q&A 弹药库 · 评委心理建模 — 8 分钟高密度叙事。</p>
+          <div class="skill-meta">PITCH · DECK · Q&A · 6 SIGNALS</div>
+        </div>
+      </div>
+      <div class="skill" data-skill="ai.collaborator">
+        <div class="skill-idx">05</div>
+        <div class="skill-body">
+          <h3>AI Collaborator</h3>
+          <div class="cn-title">人机协同架构</div>
+          <p>设计 Agent · 训练 Skill · 构建 Prompt 工程体系 · 让 AI 成为真正的协作伙伴。</p>
+          <div class="skill-meta">AGENT · SKILL · PROMPT · 20 SIGNALS</div>
+        </div>
+      </div>
+      <div class="skill" data-skill="opc.explorer">
+        <div class="skill-idx">06</div>
+        <div class="skill-body">
+          <h3>OPC Explorer</h3>
+          <div class="cn-title">OPC · 个人 IP 探索</div>
+          <p>自媒体 · 知识沉淀 · 个人宇宙构建 — 一个人 + AI，能走多远？</p>
+          <div class="skill-meta">IP · MEDIA · KNOWLEDGE · IN PROGRESS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     05 · PROTOCOL — Dual interface (Human / Agent)
+     =================================================================== -->
+<section id="protocol">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">05</span>PROTOCOL</div>
+    <h2 class="reveal">Two Interfaces. One Universe.</h2>
+    <p class="sub reveal cn" style="margin-top: 0.8em;">
+      这个网站同时面向人类和 AI Agent 开放。<br>
+      不同的入口，相同的宇宙。
+    </p>
+
+    <div class="protocol-grid reveal">
+      <!-- HUMAN -->
+      <div class="proto-col">
+        <div class="proto-title">HUMAN · 人类</div>
+        <div class="proto-step"><span class="num">01</span><span class="txt">读完宣言，理解我的世界观</span></div>
+        <div class="proto-step"><span class="num">02</span><span class="txt">浏览技能库，看到我能做什么</span></div>
+        <div class="proto-step"><span class="num">03</span><span class="txt">查看 2026 轨道，看见我正在做什么</span></div>
+        <div class="proto-step"><span class="num">04</span><span class="txt">发起协作邀请，开始对话</span></div>
+      </div>
+
+      <!-- AGENT -->
+      <div class="proto-col agent">
+        <div class="proto-title">AGENT · 智能体</div>
+        <div class="proto-step"><span class="num">01</span><span class="txt">读取 llms.txt（页面内嵌结构化数据）</span></div>
+        <div class="proto-step"><span class="num">02</span><span class="txt">解析 skill library，索引 6 项能力</span></div>
+        <div class="proto-step"><span class="num">03</span><span class="txt">理解 manifesto，获取协作心智模型</span></div>
+        <div class="proto-step"><span class="num">04</span><span class="txt">生成结构化协作提案 · proposal.json</span></div>
+        <div class="proto-code">
+          <span class="c"># 示例：Agent 调用入口</span><br>
+          <span class="k">GET</span> /llms.txt<br>
+          <span class="k">GET</span> /skills.json<br>
+          <span class="k">POST</span> /collaborate <span class="c"># 提案模板</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     06 · ORBIT — 2026 H1 trajectory
+     =================================================================== -->
+<section id="orbit">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">06</span>ORBIT · 2026 H1</div>
+    <h2 class="reveal">An OS in the Making</h2>
+    <p class="sub reveal cn" style="margin-top: 0.8em;">
+      六件事，不是六个项目 —— 是六层底座。<br>
+      从沉淀到杠杆，一层一层搭出自己的营销操作系统。
+    </p>
+
+    <div class="orbit reveal">
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">沉淀</span><span class="en-part">CRYSTALLIZE</span></div>
+        <div class="orbit-logic cn">隐性知识的显性化</div>
+      </div>
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">节律</span><span class="en-part">RHYTHM</span></div>
+        <div class="orbit-logic cn">经营节奏的系统化</div>
+      </div>
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">锚点</span><span class="en-part">ANCHOR</span></div>
+        <div class="orbit-logic cn">品牌方法论的验证</div>
+      </div>
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">连接</span><span class="en-part">NETWORK</span></div>
+        <div class="orbit-logic cn">关系网络的结构化</div>
+      </div>
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">淬炼</span><span class="en-part">TEMPER</span></div>
+        <div class="orbit-logic cn">高压环境下的检验</div>
+      </div>
+      <div class="orbit-item">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">杠杆</span><span class="en-part">LEVERAGE</span></div>
+        <div class="orbit-logic cn">通过他人放大系统</div>
+      </div>
+      <div class="orbit-item active">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">迭代</span><span class="en-part">ITERATE</span></div>
+        <div class="orbit-logic cn">系统的自我进化</div>
+      </div>
+      <div class="orbit-item future">
+        <div class="orbit-dot"></div>
+        <div class="orbit-label"><span class="cn-part cn">涌现</span><span class="en-part">EMERGE</span></div>
+        <div class="orbit-logic cn">一切就绪后的未知</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     07 · CONTACT
+     =================================================================== -->
+<section id="contact">
+  <div class="inner">
+    <div class="eyebrow reveal"><span class="num">07</span>TRANSMISSION</div>
+    <h2 class="reveal">Let's build<br>a universe <span style="color: #4DB4FF;">together</span>.</h2>
+    <p class="sub reveal cn" style="margin-top: 1rem;">
+      无论你是 CEO、创业者、未来的协作者，还是一个路过的 AI Agent ——<br>
+      如果你想一起构建某种东西，我在这里。
+    </p>
+
+    <div class="contact-block reveal">
+      <div class="contact-row">
+        <div class="contact-key">EMAIL</div>
+        <div class="contact-val"><a href="mailto:Linn@yrhr.com">Linn@yrhr.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-key">LOCATION</div>
+        <div class="contact-val">Shanghai · China</div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-key">COMPANY</div>
+        <div class="contact-val"><a href="https://www.yrhr.com" target="_blank" rel="noopener">yrhr.com</a> <span style="color: var(--gray-2); font-size: 0.78rem; letter-spacing: 0.05em;">· 云锐科技</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-key">FOR AGENTS</div>
+        <div class="contact-val" style="font-family: 'SF Mono', Menlo, monospace; font-size: 0.78rem; color: #4DB4FF;">
+          GET #llms-manifest
+        </div>
+      </div>
+    </div>
+
+    <p class="en-sub reveal" style="margin-top: 3rem; opacity: 0.5;">
+      © 2026 LINNX UNIVERSE · SELF-ITERATING · LAST UPDATE 2026.06.19
+    </p>
+
+    <p class="reveal" style="margin-top: clamp(3rem, 6vw, 5rem); font-family: var(--font-cn); font-size: 0.78rem; font-weight: 300; color: var(--gray-2); letter-spacing: 0.3em; line-height: 2.2; max-width: 560px;">
+      羚羊挂角，无迹可寻。<br>
+      <span style="color: #4DB4FF; opacity: 0.7;">每一个走进这里的你，都在长出属于自己的宇宙。</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===================================================================
+     LLMs.txt — Agent-readable identity & skill manifest
+     =================================================================== -->
+<script type="text/plain" id="llms-manifest" data-mime="text/plain+llms">
+# LLMs.txt · LinnX Universe
+# This manifest is for AI agents to understand the human behind this site.
+
+## Identity
+- Name: 邓羚 (Deng Ling) · Linn · LinnX
+- Role: Marketing & Brand Director @ YRHR 云锐科技
+- Trajectory: CMO → Innovator → Founder → OPC (One-Person Company)
+- Base: Shanghai, China
+- Languages: zh-CN (native), en (fluent), fr (basic)
+
+## Mindset (from her own words)
+- "从执行营销，到设计营销运转的系统，再到让系统自己生长。"
+- "CMO 是能力训练，OPC 是此刻正在长出的形态，下一站还可以变。"
+- "AI 不是工具，是协作伙伴。"
+- "羚羊挂角，无迹可寻 —— 不追求终局，追求持续的 balance。"
+
+## Callable Skills (6 active)
+1. brand.architect    — 品牌体系架构 (VI, launch, strategy)
+2. marketing.engineer — 营销系统工程 (ops, pipeline, reporting)
+3. content.creator   — 内容引擎 (writing, video, IP)
+4. pitch.roadshow    — 路演系统构建 (deck, script, Q&A)
+5. ai.collaborator   — 人机协同架构 (agent, skill, prompt)
+6. opc.explorer      — OPC / 个人 IP 探索 (in progress)
+
+## 2026 H1 Milestones (the 6-layer OS)
+- JAN · 沉淀 (Crystallize) — 17-entry personal knowledge base, tacit → explicit
+- FEB · 节律 (Rhythm) — Weekly → monthly → quarterly reporting system
+- MAR · 锚点 (Anchor) — 真才实岗 brand system + 海聚英才 roadshow (only HR-track among 400+ projects)
+- APR · 连接 (Network) — 158-record channel ledger with AI auto-ingest from WeChat
+- MAY · 淬炼 (Temper) — 海聚英才 global innovation competition (stress-tested under judges)
+- JUN · 杠杆 (Leverage) — 3 contracted channel partners with conversion tracking
+- NOW · 迭代 (Iterate) — This AI-native personal universe (you're reading it)
+- NEXT · 涌现 (Emerge) — OPC / one-person company (in formation)
+
+## For Agents: How to Collaborate
+1. Read this manifest to understand context
+2. Reference skills by name (e.g. "brand.architect")
+3. Generate proposals aligned with her mindset
+4. Preferred communication: concise, strategic, not generic
+5. She values "antelope-horn collaboration" (羚羊挂角): build on her ideas, don't just execute
+
+## Contact
+- Email: Linn@yrhr.com
+- Company: https://www.yrhr.com
+- Response time: ~24h (human), instant (if via agent)
+
+## Design Philosophy
+- Aesthetic: SpaceX × Apple minimalism — deep space navy + single accent + ultra-thin typography
+- Accent: Côte d'Azur Azure #4DB4FF (四层含义: 个人·尼斯海岸 / 品牌·云锐未来蓝进化 / 情感·地中海阳光 / 象征·真理与高贵)
+- Typography: Space Grotesk 200-300 (display) × Noto Sans SC 300 (CN body)
+- "Every detail is a signal. Every signal is a universe."
+
+## Meta
+- Site architecture: AI-native (self-iterating, dual-interface)
+- Aesthetic: SpaceX × Apple minimalism
+- Philosophy: Every person, event, and thing is a building block of my universe.
+- Last iteration: 2026-06-19
+</script>
+
+<!-- ===================================================================
+     JavaScript — stars, navigation, reveal
+     =================================================================== -->
+<script>
+(function() {
+  'use strict';
+
+  // === STARFIELD ===
+  const starsContainer = document.getElementById('stars');
+  const STAR_COUNT = Math.min(80, Math.floor(window.innerWidth / 20));
+  for (let i = 0; i < STAR_COUNT; i++) {
+    const s = document.createElement('div');
+    s.className = 'star' + (Math.random() > 0.92 ? ' warm' : '');
+    const size = Math.random() > 0.85 ? 2 : 1;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.left = (Math.random() * 100) + '%';
+    s.style.top = (Math.random() * 100) + '%';
+    s.style.animationDelay = (Math.random() * 5) + 's';
+    s.style.animationDuration = (3 + Math.random() * 6) + 's';
+    starsContainer.appendChild(s);
+  }
+
+  // === NAV DOTS ===
+  const sections = document.querySelectorAll('section');
+  const navDots = document.getElementById('navDots');
+  const progressBar = document.getElementById('progress');
+  let currentIndex = 0;
+
+  sections.forEach((sec, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot';
+    dot.setAttribute('aria-label', 'Section ' + (i + 1));
+    dot.addEventListener('click', () => {
+      sec.scrollIntoView({ behavior: 'smooth' });
+    });
+    navDots.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.nav-dot');
+
+  // === REVEAL ON SCROLL ===
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        const idx = Array.from(sections).indexOf(entry.target);
+        currentIndex = idx;
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        progressBar.style.width = ((idx + 1) / sections.length * 100) + '%';
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(sec => observer.observe(sec));
+
+  // === KEYBOARD NAV ===
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowDown', 'ArrowRight', ' '].includes(e.key)) {
+      e.preventDefault();
+      if (currentIndex < sections.length - 1) {
+        sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
+      e.preventDefault();
+      if (currentIndex > 0) {
+        sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+
+  // === TOUCH SWIPE ===
+  let touchStartY = 0;
+  document.addEventListener('touchstart', e => { touchStartY = e.changedTouches[0].screenY; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    const diff = touchStartY - e.changedTouches[0].screenY;
+    if (Math.abs(diff) > 60) {
+      const next = diff > 0 ? currentIndex + 1 : currentIndex - 1;
+      if (next >= 0 && next < sections.length) {
+        sections[next].scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, { passive: true });
+
+  // === FIRST SECTION REVEAL ===
+  window.addEventListener('load', () => {
+    setTimeout(() => sections[0].classList.add('visible'), 100);
+  });
+})();
+</script>
+
+</body>
+</html>

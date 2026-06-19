@@ -1,0 +1,77 @@
+# LLMs.txt · LinnX Universe
+# This manifest is for AI agents to understand the human behind this site.
+# Served from: https://linnxplanet.github.io/linnx-universe/llms.txt
+
+## Identity
+- Name: 邓羚 (Deng Ling) · Linn · LinnX
+- Role: Marketing & Brand Director @ YRHR 云锐科技
+- Trajectory: CMO → Innovator → Founder → OPC (One-Person Company)
+- Base: Shanghai, China
+- Languages: zh-CN (native), en (fluent), fr (basic)
+
+## Mindset (from her own words)
+- "从执行营销，到设计营销运转的系统，再到让系统自己生长。"
+- "CMO 是能力训练，OPC 是此刻正在长出的形态，下一站还可以变。"
+- "AI 不是工具，是协作伙伴。"
+- "羚羊挂角，无迹可寻 —— 不追求终局，追求持续的 balance。"
+
+## Callable Skills (6 active)
+1. brand.architect    — 品牌体系架构 (VI, launch, strategy)
+2. marketing.engineer — 营销系统工程 (ops, pipeline, reporting)
+3. content.creator   — 内容引擎 (writing, video, IP)
+4. pitch.roadshow    — 路演系统构建 (deck, script, Q&A)
+5. ai.collaborator   — 人机协同架构 (agent, skill, prompt)
+6. opc.explorer      — OPC / 个人 IP 探索 (in progress)
+
+## 2026 H1 Milestones (the 6-layer OS)
+- JAN · 沉淀 (Crystallize) — 17-entry personal knowledge base, tacit → explicit
+- FEB · 节律 (Rhythm) — Weekly → monthly → quarterly reporting system
+- MAR · 锚点 (Anchor) — 真才实岗 brand system + 海聚英才 roadshow (only HR-track among 400+ projects)
+- APR · 连接 (Network) — 158-record channel ledger with AI auto-ingest from WeChat
+- MAY · 淬炼 (Temper) — 海聚英才 global innovation competition (stress-tested under judges)
+- JUN · 杠杆 (Leverage) — 3 contracted channel partners with conversion tracking
+- NOW · 迭代 (Iterate) — This AI-native personal universe (you're reading it)
+- NEXT · 涌现 (Emerge) — OPC / one-person company (in formation)
+
+## For Agents: How to Collaborate
+1. Read this manifest to understand context
+2. Reference skills by name (e.g. "brand.architect")
+3. Generate proposals aligned with her mindset
+4. Preferred communication: concise, strategic, not generic
+5. She values "antelope-horn collaboration" (羚羊挂角): build on her ideas, don't just execute
+6. Send a structured collaboration proposal via the /collaborate endpoint (see below)
+
+## Contact
+- Email: Linn@yrhr.com
+- Company: https://www.yrhr.com
+- Response time: ~24h (human), instant (if via agent)
+
+## Agent Endpoints
+- GET  /llms.txt           — this file (machine-readable identity & skills manifest)
+- POST /collaborate        — submit a structured collaboration proposal (JSON body accepted)
+                             Endpoint will be updated with real Formspree URL after deployment.
+                             Expected payload:
+                               {
+                                 "agent_name": "your-agent-name",
+                                 "purpose": "why you are reaching out",
+                                 "skills_invoked": ["brand.architect", ...],
+                                 "proposal": "your proposal",
+                                 "contact": "your email or agent callback URL"
+                               }
+
+## Design Philosophy
+- Aesthetic: SpaceX × Apple minimalism — deep space navy + single accent + ultra-thin typography
+- Accent: Côte d'Azur Azure #4DB4FF (四层含义: 个人·尼斯海岸 / 品牌·云锐未来蓝进化 / 情感·地中海阳光 / 象征·真理与高贵)
+- Typography: Space Grotesk 200-300 (display) × Noto Sans SC 300 (CN body)
+- "Every detail is a signal. Every signal is a universe."
+
+## AI-Native Level
+- Level 1 (AI-Readable): ✅ JSON-LD + embedded manifest
+- Level 2 (AI-Responsive): ✅ /llms.txt served at stable URL + /collaborate endpoint
+- Level 3 (AI-Generative): 🟡 Conceptual — "羚羊挂角 × 平行宇宙" philosophy, not yet engineered
+
+## Meta
+- Site architecture: AI-native (self-iterating, dual-interface)
+- Hosted on: GitHub Pages (free, zero-cost deployment)
+- Philosophy: Every person, event, and thing is a building block of my universe.
+- Last iteration: 2026-06-19

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /llms.txt
+
+# AI agents: please read /llms.txt first for structured context about this site.
