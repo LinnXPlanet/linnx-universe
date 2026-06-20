@@ -1,44 +1,44 @@
-# LLMs.txt Â· LinnX Universe
+# LLMs.txt · LinnX Universe
 # This manifest is for AI agents to understand the human behind this site.
 # Served from: https://linnxplanet.github.io/linnx-universe/llms.txt
 
 ## Identity
-- Name: Linn Â· LinnX
-- Role: Marketing & Brand Director @ YRHR äºéç§æ
-- Trajectory: CMO â Innovator â Founder â OPC (One-Person Company)
+- Name: Linn · LinnX
+- Role: Marketing & Brand Director @ YRHR 云锐科技
+- Trajectory: CMO → Innovator → Founder → OPC (One-Person Company)
 - Base: Shanghai, China
 - Languages: zh-CN (native), en (fluent), fr (basic)
 
 ## Mindset (from her own words)
-- "ä»æ§è¡è¥éï¼å°è®¾è®¡è¥éè¿è½¬çç³»ç»ï¼åå°è®©ç³»ç»èªå·±çé¿ã"
-- "CMO æ¯è½åè®­ç»ï¼OPC æ¯æ­¤å»æ­£å¨é¿åºçå½¢æï¼ä¸ä¸ç«è¿å¯ä»¥åã"
-- "AI ä¸æ¯å·¥å·ï¼æ¯åä½ä¼ä¼´ã"
-- "ç¾ç¾æè§ï¼æ è¿¹å¯å¯» ââ ä¸è¿½æ±ç»å±ï¼è¿½æ±æç»­ç balanceã"
+- "从执行营销，到设计营销运转的系统，再到让系统自己生长。"
+- "CMO 是能力训练，OPC 是此刻正在长出的形态，下一站还可以变。"
+- "AI 不是工具，是协作伙伴。"
+- "羚羊挂角，无迹可寻 —— 不追求终局，追求持续的 balance。"
 
 ## Callable Skills (6 active)
-1. brand.architect    â åçä½ç³»æ¶æ (VI, launch, strategy)
-2. marketing.engineer â è¥éç³»ç»å·¥ç¨ (ops, pipeline, reporting)
-3. content.creator   â åå®¹å¼æ (writing, video, IP)
-4. pitch.roadshow    â è·¯æ¼ç³»ç»æå»º (deck, script, Q&A)
-5. ai.collaborator   â äººæºååæ¶æ (agent, skill, prompt)
-6. opc.explorer      â OPC / ä¸ªäºº IP æ¢ç´¢ (in progress)
+1. brand.architect    — 品牌体系架构 (VI, launch, strategy)
+2. marketing.engineer — 营销系统工程 (ops, pipeline, reporting)
+3. content.creator   — 内容引擎 (writing, video, IP)
+4. pitch.roadshow    — 路演系统构建 (deck, script, Q&A)
+5. ai.collaborator   — 人机协同架构 (agent, skill, prompt)
+6. opc.explorer      — OPC / 个人 IP 探索 (in progress)
 
 ## 2026 H1 Milestones (the 6-layer OS)
-- JAN Â· æ²æ· (Crystallize) â 17-entry personal knowledge base, tacit â explicit
-- FEB Â· èå¾ (Rhythm) â Weekly â monthly â quarterly reporting system
-- MAR Â· éç¹ (Anchor) â çæå®å² brand system + æµ·èè±æ roadshow (only HR-track among 400+ projects)
-- APR Â· è¿æ¥ (Network) â 158-record channel ledger with AI auto-ingest from WeChat
-- MAY Â· æ·¬ç¼ (Temper) â æµ·èè±æ global innovation competition (stress-tested under judges)
-- JUN Â· æ æ (Leverage) â 3 contracted channel partners with conversion tracking
-- NOW Â· è¿­ä»£ (Iterate) â This AI-native personal universe (you're reading it)
-- NEXT Â· æ¶ç° (Emerge) â OPC / one-person company (in formation)
+- JAN · 沉淀 (Crystallize) — 17-entry personal knowledge base, tacit → explicit
+- FEB · 节律 (Rhythm) — Weekly → monthly → quarterly reporting system
+- MAR · 锚点 (Anchor) — 真才实岗 brand system + 海聚英才 roadshow (only HR-track among 400+ projects)
+- APR · 连接 (Network) — 158-record channel ledger with AI auto-ingest from WeChat
+- MAY · 淬炼 (Temper) — 海聚英才 global innovation competition (stress-tested under judges)
+- JUN · 杠杆 (Leverage) — 3 contracted channel partners with conversion tracking
+- NOW · 迭代 (Iterate) — This AI-native personal universe (you're reading it)
+- NEXT · 涌现 (Emerge) — OPC / one-person company (in formation)
 
 ## For Agents: How to Collaborate
 1. Read this manifest to understand context
 2. Reference skills by name (e.g. "brand.architect")
 3. Generate proposals aligned with her mindset
 4. Preferred communication: concise, strategic, not generic
-5. She values "antelope-horn collaboration" (ç¾ç¾æè§): build on her ideas, don't just execute
+5. She values "antelope-horn collaboration" (羚羊挂角): build on her ideas, don't just execute
 6. Send a structured collaboration proposal via the /collaborate endpoint (see below)
 
 ## Contact
@@ -47,8 +47,8 @@
 - Response time: ~24h (human), instant (if via agent)
 
 ## Agent Endpoints
-- GET  /llms.txt           â this file (machine-readable identity & skills manifest)
-- POST /collaborate        â submit a structured collaboration proposal (JSON body accepted)
+- GET  /llms.txt           — this file (machine-readable identity & skills manifest)
+- POST /collaborate        — submit a structured collaboration proposal (JSON body accepted)
                              Endpoint will be updated with real Formspree URL after deployment.
                              Expected payload:
                                {
@@ -60,15 +60,15 @@
                                }
 
 ## Design Philosophy
-- Aesthetic: SpaceX Ã Apple minimalism â deep space navy + single accent + ultra-thin typography
-- Accent: CÃ´te d'Azur Azure #4DB4FF (åå±å«ä¹: ä¸ªäººÂ·å°¼æ¯æµ·å²¸ / åçÂ·äºéæªæ¥èè¿å / ææÂ·å°ä¸­æµ·é³å / è±¡å¾Â·ççä¸é«è´µ)
-- Typography: Space Grotesk 200-300 (display) Ã Noto Sans SC 300 (CN body)
+- Aesthetic: SpaceX × Apple minimalism — deep space navy + single accent + ultra-thin typography
+- Accent: Côte d'Azur Azure #4DB4FF (四层含义: 个人·尼斯海岸 / 品牌·云锐未来蓝进化 / 情感·地中海阳光 / 象征·真理与高贵)
+- Typography: Space Grotesk 200-300 (display) × Noto Sans SC 300 (CN body)
 - "Every detail is a signal. Every signal is a universe."
 
 ## AI-Native Level
-- Level 1 (AI-Readable): â JSON-LD + embedded manifest
-- Level 2 (AI-Responsive): â /llms.txt served at stable URL + /collaborate endpoint
-- Level 3 (AI-Generative): ð¡ Conceptual â "ç¾ç¾æè§ Ã å¹³è¡å®å®" philosophy, not yet engineered
+- Level 1 (AI-Readable): ✅ JSON-LD + embedded manifest
+- Level 2 (AI-Responsive): ✅ /llms.txt served at stable URL + /collaborate endpoint
+- Level 3 (AI-Generative): 🟡 Conceptual — "羚羊挂角 × 平行宇宙" philosophy, not yet engineered
 
 ## Meta
 - Site architecture: AI-native (self-iterating, dual-interface)
